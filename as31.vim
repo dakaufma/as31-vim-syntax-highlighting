@@ -6,38 +6,41 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn match asmNum '#\d\{,3}d\>\c'
-syn match asmNum '#[01]\{,8}b\>\c'
-syn match asmNum '#\d[0-9A-F]\{,2}h\>\c'
-syn match asmComment ';.*$'
+syn match as31Num '#\d\{,3}d\>\c'
+syn match as31Num '#[01]\{,8}b\>\c'
+syn match as31Num '#\d[0-9A-F]\{,2}h\>\c'
 
-syn match asmCmd '^\s*mov\>\c'
-syn match asmCmd '^\s*movc\>\c'
-syn match asmCmd '^\s*clr\>\c'
-syn match asmCmd '^\s*setb\>\c'
-syn match asmCmd '^\s*lcall\>\c'
-syn match asmCmd '^\s*djnz\>\c'
-syn match asmCmd '^\s*sjmp\>\c'
-syn match asmCmd '^\s*ret\>\c'
-syn match asmCmd '^\s*rl\>\c'
-syn match asmCmd '^\s*jnb\>\c'
-syn match asmCmd '^\s*anl\>\c'
-syn match asmCmd '^\s*subb\>\c'
-syn match asmCmd '^\s*push\>\c'
-syn match asmCmd '^\s*add\>\c'
-syn match asmCmd '^\s*jc\>\c'
-syn match asmCmd '^\s*cjne\>\c'
-syn match asmCmd '^\s*pop\>\c'
-syn match asmCmd '^\s*mul\s\+AB\>\c'
-syn match asmCmd '^\s*div\s\+AB\>\c'
-syn match asmCmd '^\s*jnc\>\c'
-syn match asmCmd '^\s*inc\>\c'
-syn match asmCmd '^\s*orl\>\c'
-syn match asmCmd '^\s*jb\>\c'
-syn match asmCmd '^\s*\.org\>\c'
-syn match asmCmd '^\s*\.db\>\c'
+syn match as31Comment ';.*$'
 
-"syn match asmLabel '^\s*\w\+:'
+syn match as31Label '^\s*\w\+:'
+
+syn match as31Cmd '^\s*mov\>\c'
+syn match as31Cmd '^\s*movc\>\c'
+syn match as31Cmd '^\s*clr\>\c'
+syn match as31Cmd '^\s*setb\>\c'
+syn match as31Cmd '^\s*lcall\>\c'
+syn match as31Cmd '^\s*djnz\>\c'
+syn match as31Cmd '^\s*sjmp\>\c'
+syn match as31Cmd '^\s*ljmp\>\c'
+syn match as31Cmd '^\s*ret\>\c'
+syn match as31Cmd '^\s*rl\>\c'
+syn match as31Cmd '^\s*jnb\>\c'
+syn match as31Cmd '^\s*anl\>\c'
+syn match as31Cmd '^\s*subb\>\c'
+syn match as31Cmd '^\s*push\>\c'
+syn match as31Cmd '^\s*add\>\c'
+syn match as31Cmd '^\s*jc\>\c'
+syn match as31Cmd '^\s*cjne\>\c'
+syn match as31Cmd '^\s*pop\>\c'
+syn match as31Cmd '^\s*mul\s\+AB\>\c'
+syn match as31Cmd '^\s*div\s\+AB\>\c'
+syn match as31Cmd '^\s*jnc\>\c'
+syn match as31Cmd '^\s*inc\>\c'
+syn match as31Cmd '^\s*orl\>\c'
+syn match as31Cmd '^\s*jb\>\c'
+syn match as31Cmd '^\s*\.org\>\c'
+syn match as31Cmd '^\s*\.db\>\c'
+
 
 "syn match jsimResistor '^\s*[Rr]\S*'
 "syn match jsimCapacitor '^\s*[Cc]\S*'
@@ -71,14 +74,15 @@ syn match asmCmd '^\s*\.db\>\c'
 "hi def link jsimMosfet      Type
 "hi def link jsimUserdef     Type
 "
-hi def link asmNum         Constant
-hi def link asmComment     Comment
-"hi def link asmLabel       String
+hi def link as31Num         Constant
+hi def link as31Comment     Comment
+hi def link as31Label       String
 "hi def link jsimSubcktDef   Statement
-hi def link asmCmd  Statement
+hi def link as31Cmd  Statement
 "hi def link jsimInclude     Include
 "hi def link jsimGlobal      Define
 "hi def link jsimPlotCmd     Statement
+
 "
 "setlocal foldmethod=syntax
 "normal zR
