@@ -6,9 +6,9 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn match asmNum '#\d\+d'
-syn match asmNum '#[01]\+b'
-syn match asmNum '#\d[0-9A-F]*h'
+syn match asmNum '#\d\{,3}d'
+syn match asmNum '#[01]\{,8}b'
+syn match asmNum '#\d[0-9A-F]\{,2}h'
 syn match asmComment ';.*$'
 
 syn match asmCmd '^\s*mov\s'
