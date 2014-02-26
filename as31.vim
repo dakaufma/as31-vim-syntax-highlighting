@@ -6,9 +6,9 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn match as31Num '#\d\{,3}d\>\c'
+syn match as31Num '#\d\{,4}d\>\c'
 syn match as31Num '#[01]\{,8}b\>\c'
-syn match as31Num '#\d[0-9A-F]\{,2}h\>\c'
+syn match as31Num '#\d[0-9A-F]\{,4}h\>\c'
 
 syn match as31Comment ';.*$'
 
@@ -16,20 +16,27 @@ syn match as31Label '^\s*\w\+:'
 
 syn match as31Cmd '^\s*mov\>\c'
 syn match as31Cmd '^\s*movc\>\c'
+syn match as31Cmd '^\s*movx\>\c'
 syn match as31Cmd '^\s*clr\>\c'
+syn match as31Cmd '^\s*cpl\>\c'
 syn match as31Cmd '^\s*setb\>\c'
 syn match as31Cmd '^\s*lcall\>\c'
+syn match as31Cmd '^\s*acall\>\c'
 syn match as31Cmd '^\s*djnz\>\c'
 syn match as31Cmd '^\s*sjmp\>\c'
 syn match as31Cmd '^\s*ljmp\>\c'
 syn match as31Cmd '^\s*ret\>\c'
+syn match as31Cmd '^\s*reti\>\c'
 syn match as31Cmd '^\s*rl\>\c'
 syn match as31Cmd '^\s*jnb\>\c'
 syn match as31Cmd '^\s*anl\>\c'
+syn match as31Cmd '^\s*xrl\>\c'
 syn match as31Cmd '^\s*subb\>\c'
 syn match as31Cmd '^\s*push\>\c'
 syn match as31Cmd '^\s*add\>\c'
+syn match as31Cmd '^\s*addc\>\c'
 syn match as31Cmd '^\s*jc\>\c'
+syn match as31Cmd '^\s*jz\>\c'
 syn match as31Cmd '^\s*cjne\>\c'
 syn match as31Cmd '^\s*pop\>\c'
 syn match as31Cmd '^\s*mul\s\+AB\>\c'
@@ -40,6 +47,7 @@ syn match as31Cmd '^\s*orl\>\c'
 syn match as31Cmd '^\s*jb\>\c'
 syn match as31Cmd '^\s*\.org\>\c'
 syn match as31Cmd '^\s*\.db\>\c'
+syn match as31Cmd '^\s*\.dw\>\c'
 
 
 "syn match jsimResistor '^\s*[Rr]\S*'
