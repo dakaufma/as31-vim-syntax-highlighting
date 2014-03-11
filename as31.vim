@@ -244,3 +244,9 @@ hi def link as31Cmd         Statement
 hi def link as31PreProc     PreProc
 hi def link as31Sp          Special
 hi def link as31Err         Error
+
+"Indentation
+set smartindent
+set noexpandtab
+set tabstop=8
+set shiftwidth=8
